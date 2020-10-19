@@ -261,7 +261,7 @@ def tweets(conn, Tweet, config):
                     Tweet.username,
                     Tweet.name,
                     Tweet.link,
-                    ",".join(Tweet.mentions),
+                    ",".join([m['screen_name'] for m in Tweet.mentions]),
                     ",".join(Tweet.hashtags),
                     ",".join(Tweet.cashtags),
                     ",".join(Tweet.urls),
