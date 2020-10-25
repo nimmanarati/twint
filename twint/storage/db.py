@@ -252,7 +252,7 @@ def tweets(conn, Tweet, config):
                     Tweet.datestamp,
                     Tweet.timestamp,
                     Tweet.timezone,
-                    Tweet.place,
+                    str(Tweet.place['coordinates']),
                     Tweet.replies_count,
                     Tweet.likes_count,
                     Tweet.retweets_count,
